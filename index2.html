@@ -7,14 +7,35 @@
 <body>
   May Node and Express be with you.
 </body>
-<form action="/quotes" method="POST">
-    <input type="text" placeholder="name" name="name">
-    <input type="text" placeholder="quote" name="quote">
-    <button type="submit">Submit</button>
+<form action="/users" method="POST">
+    <input type="text" placeholder="username" name="username">
+    <input type="text" placeholder="password" name="password">
+    <input type="text" placeholder="email" name="email">
+    <button type="submit">Submit Data</button>
   </form>
+  <br/>
   <form action="/delete" method="POST">
-    <input type="text" placeholder="name" name="name">
-    <input type="text" placeholder="quote" name="quote">
-    <button type="submit">Submit</button>
+    <input type="text" placeholder="username" name="username">
+    <input type="text" placeholder="password" name="password">
+    <input type="text" placeholder="email" name="email">
+    <button type="submit">Delete Data</button>
+  </form>
+  <br/>
+  <form action="/update" method="POST">
+    <input type="text" placeholder="username" name="username">
+    <input type="text" placeholder="password" name="password">
+    <input type="text" placeholder="email" name="email">
+
+    <input type="text" placeholder="new username" name="username2">
+    <input type="text" placeholder="new password" name="password2">
+    <input type="text" placeholder="new email" name="email2">
+    <button type="submit">Update Data</button>
+  </form>
+  <br/>
+  <form action="/get" method="GET">
+    <input type="text" placeholder="username" name="username">
+    <input type="text" placeholder="password" name="password">
+    <input type="text" placeholder="email" name="email">
+    <button type="submit">Get Data</button>
   </form>
 </html>
