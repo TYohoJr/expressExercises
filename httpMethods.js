@@ -60,6 +60,15 @@ app.listen(5000, function() {
 
 //feel free to only utilize these three - get will read data, post will update/inject data/ and delete will remove data 
 
-
 //use all 4 methods to mimic the correct functionality with a database. Your database will be the variable {var}
+<<<<<<< HEAD
 //USE THE SAME ROUTE FOR ALL OF THEM. It's a common design pattern.
+=======
+//USE THE SAME ROUTE FOR ALL OF THEM. It's a common design pattern. 
+
+//Some extra info - You'll use postman to make requests to your server. You'll make a route and a response i.e.
+  //app.post("/user", (req. res)=>{ ...
+//for each of the 4 cases - creating, reading, updating, and deleting. You'll utilize the proper method for each route handler i.e.
+  //app.put vs. app.post vs app.delete....
+//If it's still confusing, google search express crud server 
+>>>>>>> 74585a54d5d8a7a80d75cff21491c58b4cbc288c
