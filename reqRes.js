@@ -37,6 +37,7 @@ app.get("/", (req, res)=> {
 //you'll need use the correct HTTP method - app.post NOT app.get
 //hint: you'll need to import some middleware to parse request bodies.
 //It still doesn't work, read the code below and try to get it to respond with "you successfully logged in"
+//You'll have to modify the word hotdog...
 
 
 app.post("/authenticate", (req, res)=>{
@@ -50,6 +51,16 @@ app.post("/authenticate", (req, res)=>{
     // if (!match){
     //     res.json("couldn't find username");
     // }
+       if (entry.userName ===  req.body.hotdog && req.body.password === entry.password){
+           return true;
+       }
+   });
+    
+    if (!match){
+        res.json("you successfully logged in");
+    } else {
+        res.json("password/username don't match");
+    }
 });
 
 app.get("/email", (req, res)=>{

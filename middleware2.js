@@ -24,5 +24,5 @@ app.listen(5000, function() {
 //you just successfully used a 3rd party middleware in your server!
 
 //another middleware that is very useful is an npm package called "morgan"
-//you'll have to install in via npm. Get it working within this file and see
+//you'll have to install in via npm. Get it working within this file via app.use and see
 //how much better your logging is in your terminal as you refresh the browser.

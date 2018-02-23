@@ -6,11 +6,11 @@
 
 //for example, if I created an array of furniture, I could return all the objects that contained the property "isChair === true"
 
-//create a route for adding a new object into your data. 
 //using req.body properties to id particular objects:
 
   //create a route for returning a particular object in your data. 
   //create a route for updating a particular object in your data.
   //create a route for deleting a particular object in your data. 
+  //create a route for adding a new object into your data. 
   
 // you just created a crud server! nice work.
