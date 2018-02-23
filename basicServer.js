@@ -1,12 +1,20 @@
 var express = require("express");
 var app = express();
 
-app.get("/", (req, res)=> {
+app.get("/testing", (req, res)=> {
     res.sendfile('index.html');
 });
 
-app.listen(5000, function() {
-   console.log("Listening on 5000");
+app.get("/testing2", (req, res)=> {
+    res.sendfile('index2.html');
+});
+
+app.get("/testing3", (req, res)=> {
+    res.sendfile('index3.html');
+});
+
+app.listen(7000, function() {
+   console.log("Listening on 7000");
 });
 
 //step 1: run "node basicServer.js" in a terminal while being in the 

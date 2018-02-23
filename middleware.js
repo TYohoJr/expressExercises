@@ -1,13 +1,19 @@
 var express = require("express");
 var app = express();
-
+var bodyParser = require('body-parser')
 
 var scabbies = (req, res, next)=>{
   console.log('scabbies getting executed');
   next();
 }
 
-app.use();
+var moby = (req, res, next)=>{
+  console.log("Moby Rulz");
+  next();
+}
+
+app.use(moby);
+app.use(scabbies);
 
 app.get("/", (req, res)=> {
     res.sendfile('index.html');
@@ -16,6 +22,8 @@ app.get("/", (req, res)=> {
 app.listen(5000, function() {
    console.log("Listening on 5000");
 });
+
+app.use(bodyParser)
 
 //first thing - it's a pain in the ass having to refresh the server everytime
 //using npm, install and utilize something called "nodemon." Basically, you'll

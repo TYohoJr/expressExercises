@@ -1,5 +1,9 @@
 var express = require("express");
 var app = express();
+var bodyParser = require('body-parser')
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json());
 
 
 var db = [{
@@ -13,7 +17,7 @@ var db = [{
     email:"gobis@snobis.biz"
 }];
 
-app.get("/", ()=> {
+app.get("/", (req, res)=> {
     res.sendfile('index.html');
 });
 
@@ -39,20 +43,23 @@ app.post("/authenticate", (req, res)=>{
    var match = db.find((entry)=>{
        if (entry.userName ===  req.body.hotdog){
            res.json("you successfully logged in");  
-       } else {
-           res.json("password/username don't match");
-       }
+    //    } else {
+    //        res.json("password/username don't match");
+        }
    });
-    
-    if (!match){
-        res.json("couldn't find username");
-    }
-    
+    // if (!match){
+    //     res.json("couldn't find username");
+    // }
 });
+
+app.get("/email", (req, res)=>{
+    res.send(`your email is ${match.email}`)
+})
 
 app.listen(5000, function() {
    console.log("Listening on 5000");
 });
+
 
 
 //Lastly - create a new route and handler that responds with a username's email from a request object that contains the username
